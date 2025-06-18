@@ -8,17 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- navbar -->
     <nav class="navbar">
         <div class="nav-brand"><img src="assets/spoticon.jpg" alt="Cocktail Icon" class="brand-icon">The Spot Cafe</div>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <div class="dropdown">
-                <a href="#">Menu</a>
-                <div class="dropdown-content">
-                    <a href="#drinks">Drinks</a>
-                    <a href="#food">Food</a>                    
-                </div>
-            </div>
+            <a href="#gallery">Gallery</a>            
+            <a href="#menu">Menu</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="menu-toggle">
@@ -26,129 +22,114 @@
         </div>
     </nav>
 
+    <!-- Hero section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="motto">Where We Eat Play and Drink</p>
-            <a href="#menu" class="cta-button">View Menu</a>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="assets/irehomes.jpg" alt="Live Music Night">
+            </div>
+
+            <div class="slide fade">
+                <img src="assets/poster1.png" alt="Happy Hour">
+            </div>
+
+            <div class="slide fade">
+                <img src="assets/poster2.png" alt="Sunday Brunch">                
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <!-- Dots/circles -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <a href="#menu" class="cta-button"> View Menu</a>
+            <a href="#menu" class="cta-button"> Review Service</a>
+           
+        </div>
+        
+
+       
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/spoticon.jpg" alt="Cafe Interior">
+                <div class="gallery-overlay">
+                    <p>Modern Interior</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/spoticon.jpg" alt="Coffee Art">
+                <div class="gallery-overlay">
+                    <p>Coffee Art</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/spoticon.jpg" alt="Live Music">
+                <div class="gallery-overlay">
+                    <p>Live Entertainment</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/spoticon.jpg" alt="Food Presentation">
+                <div class="gallery-overlay">
+                    <p>Culinary Delights</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/spoticon.jpg" alt="Outdoor Seating">
+                <div class="gallery-overlay">
+                    <p>Outdoor Experience</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/spoticon.jpg" alt="Special Events">
+                <div class="gallery-overlay">
+                    <p>Special Events</p>
+                </div>
+            </div>
         </div>
     </section>
 
+     <!-- Menu Section -->
     <section id="menu" class="menu-section">
-        <h2>Our Menu</h2>
-        
+        <h2>Our Menu</h2>        
         <div class="menu-category"  id="drinks">
-            <br/><br/><br/><br/>
-            <h3>Drinks</h3>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Coffee">
-                    <h4>Specialty Coffee</h4>
-                    <p>Premium roasted coffee selection</p>
-                    <span class="price">$4.99</span>
+                    <img src="assets/MenuProteins1.jpg">
                 </div>
                 <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625" alt="Smoothie">
-                    <h4>Fresh Smoothies</h4>
-                    <p>Blend of fresh fruits and yogurt</p>
-                    <span class="price">$5.99</span>
+                    <img src="assets/MenuProteins2.jpg">
                 </div>
                 <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574" alt="Tea">
-                    <h4>Artisan Tea</h4>
-                    <p>Selection of premium loose leaf teas</p>
-                    <span class="price">$3.99</span>
+                    <img src="assets/MenuProteins 3.jpg">
                 </div>
                 <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Iced Coffee">
-                    <h4>Iced Coffee</h4>
-                    <p>Cold brewed perfection</p>
-                    <span class="price">$4.49</span>
+                    <img src="assets/MenuProteins4.jpg">
                 </div>
                 <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd" alt="Hot Chocolate">
-                    <h4>Hot Chocolate</h4>
-                    <p>Rich and creamy chocolate drink</p>
-                    <span class="price">$4.29</span>
+                    <img src="assets/MenuProteins5.jpg">
                 </div>
                 <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc" alt="Lemonade">
-                    <h4>Fresh Lemonade</h4>
-                    <p>Homemade with real lemons</p>
-                    <span class="price">$3.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e" alt="Matcha Latte">
-                    <h4>Matcha Latte</h4>
-                    <p>Premium grade matcha green tea</p>
-                    <span class="price">$5.49</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699" alt="Fruit Juice">
-                    <h4>Fresh Juice</h4>
-                    <p>Freshly squeezed seasonal fruits</p>
-                    <span class="price">$4.99</span>
+                    <img src="assets/MenuProteins6.jpg">
                 </div>
             </div>
         </div>
 
         <div class="separator-line"></div>
-
-        <div class="menu-category" id="food">
-            <br/><br/><br/><br/>
-            <h3>Food</h3>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af" alt="Sandwich">
-                    <h4>Gourmet Sandwiches</h4>
-                    <p>Fresh ingredients on artisan bread</p>
-                    <span class="price">$8.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Salad">
-                    <h4>Garden Fresh Salads</h4>
-                    <p>Mixed greens with house dressing</p>
-                    <span class="price">$7.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Pastry">
-                    <h4>Fresh Pastries</h4>
-                    <p>Baked daily in house</p>
-                    <span class="price">$4.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929" alt="Breakfast">
-                    <h4>All-Day Breakfast</h4>
-                    <p>Classic breakfast favorites</p>
-                    <span class="price">$10.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="Burger">
-                    <h4>Gourmet Burger</h4>
-                    <p>Premium beef with fresh toppings</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1574126154517-d1e0d89ef734" alt="Pancakes">
-                    <h4>Fluffy Pancakes</h4>
-                    <p>Served with maple syrup</p>
-                    <span class="price">$8.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Pizza">
-                    <h4>Artisan Pizza</h4>
-                    <p>Wood-fired with fresh toppings</p>
-                    <span class="price">$13.99</span>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae" alt="Bowl">
-                    <h4>Buddha Bowl</h4>
-                    <p>Healthy and nutritious bowl</p>
-                    <span class="price">$11.99</span>
-                </div>
-            </div>
-        </div>
     </section>
 
+    
+     <!-- Conatc US Section -->
     <section id="contact" class="contact-section">
         <h2>Visit Us today</h2>
         <div class="contact-info">
@@ -163,6 +144,25 @@
             <div class="contact-item">
                 <i class="fas fa-hourglass-half"></i>
                 <p>9am - 11pm</p>
+            </div>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://facebook.com/thespotcafe" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/thespotcafe" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/thespotcafe" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://tiktok.com/@thespotcafe" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
         </div>
     </section>

@@ -1,37 +1,39 @@
+let slideIndex = 1;
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Auto advance slides
+function autoSlide() {
+    changeSlide(1);
+    setTimeout(autoSlide, 10000); // Change slide every 10 seconds
+}
+
+// Initialize slideshow
 document.addEventListener('DOMContentLoaded', function() {
-    const backToTopButton = document.getElementById('back-to-top');
-
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    });
-
-    // Smooth scroll to top when button is clicked
-    backToTopButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.navbar')) {
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
-        }
-    });
+    showSlides(slideIndex);
+    autoSlide();
 });
